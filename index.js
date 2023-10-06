@@ -177,7 +177,18 @@ function checkWinningCondition(){
 }
 
 function checkDraw(){
+    let counter=0;
+        for(let button of buttons){
+            if(button.innerText!='.'){
+                counter++;
+            }
+        }
 
+    if(counter==9){
+        popupMessage.style.display = "block";
+        winningMessage.innerText="Draw";
+        winningAudio.play();
+    }
 }
 
 
