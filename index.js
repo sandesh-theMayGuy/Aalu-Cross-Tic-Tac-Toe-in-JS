@@ -111,7 +111,6 @@ button.addEventListener("click",function(e){
 
     checkWinningCondition();
 
-    checkDraw();
 });
 }
 
@@ -172,6 +171,8 @@ function checkWinningCondition(){
 
 
 
+        }else{
+            checkDraw();
         }
 
 }
