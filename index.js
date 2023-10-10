@@ -111,13 +111,14 @@ button.addEventListener("click",function(e){
 
     checkWinningCondition();
 
-    checkDraw();
 });
 }
 
 
 
 function checkWinningCondition(){
+
+ 
         if(aalusMove[0][0]&&aalusMove[0][1]&&aalusMove[0][2]){
             winner="aalu"
         }else if(aalusMove[1][0]&&aalusMove[1][1]&&aalusMove[1][2]){
@@ -172,12 +173,25 @@ function checkWinningCondition(){
 
 
 
+        }else{
+            checkDraw();
         }
 
 }
 
 function checkDraw(){
+    let counter=0;
+        for(let button of buttons){
+            if(button.innerText!='.'){
+                counter++;
+            }
+        }
 
+    if(counter==9){
+        popupMessage.style.display = "block";
+        winningMessage.innerText="Draw";
+        winningAudio.play();
+    }
 }
 
 
