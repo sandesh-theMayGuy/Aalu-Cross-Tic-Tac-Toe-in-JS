@@ -117,6 +117,8 @@ button.addEventListener("click",function(e){
 
 
 function checkWinningCondition(){
+
+ 
         if(aalusMove[0][0]&&aalusMove[0][1]&&aalusMove[0][2]){
             winner="aalu"
         }else if(aalusMove[1][0]&&aalusMove[1][1]&&aalusMove[1][2]){
